@@ -16,7 +16,20 @@ module.exports = {
   },
 
   module: {
-    rules: [{ test: /\.(ts|js)x?$/, loader: 'babel-loader', exclude: /node_modules/ }],
+    rules: [
+        {
+            test: /\.(ts|js)x?$/,
+            exclude: /node_modules/,
+            use : [
+                {
+                    loader: 'babel-loader',
+                    query: {
+                        cacheDirectory: true,
+                    }
+                }
+            ]
+
+        }],
   },
 
   plugins: [
