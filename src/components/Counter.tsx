@@ -1,24 +1,33 @@
 import React, { Component } from 'react';
 
-export interface CounterProps {}
+export interface CounterProps {
+}
 
 export interface CounterState {
-  value: number;
+    value: number;
 }
 
 export class Counter extends Component<CounterProps, CounterState> {
-  readonly state: CounterState = { value: 0 };
+    readonly state: CounterState = { value: 0 };
 
-  public render() {
-    return (
-      <>
-        <div>{ this.state.value }</div>
-        <button onClick={ this.handleIncrement }>+</button>
-        <button onClick={ this.handleDecrement }>-</button>
-      </>
-    );
-  }
+    private handleIncrement = () => {
+        const { value } = this.state;
+        this.setState({ value: value + 1 });
+    };
 
-  private handleIncrement = () => this.setState({ value: this.state.value + 1 })
-  private handleDecrement = () => this.setState({ value: this.state.value - 1 })
+    private handleDecrement = () => {
+        const { value } = this.state;
+        this.setState({ value: value - 1 });
+    };
+
+    public render() {
+        const { value } = this.state;
+        return (
+            <>
+                <div>{value}</div>
+                <button type="button" onClick={this.handleIncrement}>+</button>
+                <button type="button" onClick={this.handleDecrement}>-</button>
+            </>
+        );
+    }
 }

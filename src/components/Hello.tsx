@@ -1,9 +1,9 @@
 import React from 'react';
 
 export interface HelloProps {
-  name: string;
+    name: string;
 }
 
 export const Hello: React.FC<HelloProps> = ({ name }) => (
-  <h1>{ name }</h1>
+    <h1>{name}</h1>
 );
