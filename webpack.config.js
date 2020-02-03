@@ -4,7 +4,7 @@ const path = require('path');
 const APP_PATH = path.resolve(__dirname, 'src');
 
 module.exports = {
-    entry: APP_PATH,
+    entry: [ 'react-hot-loader/patch', APP_PATH],
 
     output: {
         filename: 'bundle.js',
@@ -32,8 +32,11 @@ module.exports = {
                         }
                     }
                 ]
-
-            }
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'],
+            },
         ],
     },
 
