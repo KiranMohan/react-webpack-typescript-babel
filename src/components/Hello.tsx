@@ -1,9 +1,9 @@
-import React, { SFC } from 'react';
+import React from 'react';
 
 export interface HelloProps {
   name: string;
 }
 
-export const Hello: SFC<HelloProps> = ({ name }) => (
+export const Hello: React.FC<HelloProps> = ({ name }) => (
   <h1>{ name }</h1>
 );
