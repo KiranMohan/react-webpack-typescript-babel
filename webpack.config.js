@@ -6,7 +6,7 @@ const APP_PATH = path.resolve(__dirname, 'src');
 
 module.exports = {
     devtool: 'source-map',
-    entry: ['react-hot-loader/patch', APP_PATH],
+    entry: [APP_PATH],
 
     output: {
         filename: 'bundle.js',
@@ -19,9 +19,6 @@ module.exports = {
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.json'],
-        alias: {
-            'react-dom': '@hot-loader/react-dom',
-        },
     },
 
     module: {
