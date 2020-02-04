@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html,body {
     margin: 0;
     padding: 0;
@@ -6,14 +10,14 @@ html,body {
 
 #rootContainer{
     min-height: 100%;
-    position: relative;
+    position: relative; /* must be relative so that inner elements can arranged accordingly */
 }
 
 #container {
     position: absolute;
     padding: 8px;
-    height: calc(100% - 16px);  /* we need to reduce 16px from height to account for the padding of 8px at top and bottom. */
-    width: calc(100% - 16px);   /* we need to reduce 16px from widht to account for the padding of 8px at left and right. */
+    height: 100%;
+    width: 100%;
 }
 
 #header {
@@ -26,26 +30,28 @@ html,body {
 #content {
     padding: 8px;
     margin: 8px 0;
-    height: calc(100% - 192px);
-    /* Calculation of height
-    #container padding top & bottom = 8px + 8px = 16px
-    #header height + padding top & bottom + border top & bottom = 80 + 16 + 2
-    #footer height + border = 60 + 2
-    #content margin top & bottom = 16
+    height: calc(100% - 156px);
 
-    total = 192px;
+    /* Calculation of height
+
+    Note: we have set box-sizing; border-box for all components
+          so padding, margin are part of the component dimension.
+
+    #container padding top & bottom = 8px + 8px = 16px
+    #header height = 80
+    #footer height = 60
+
+    total = 156px;
 
     */
-    overflow-y: scroll;
+    overflow-y: auto;
 
     border: 1px solid;
     border-radius: 2px;
 
 }
 #footer {
-    position: absolute;
-    bottom: 8px;
-    width: inherit;
+    width: 100%;
     height: 60px;
     /*padding: 8px;  No Padding at footer. Apply padding if required to the child elements. */
 
@@ -53,5 +59,3 @@ html,body {
     border-radius: 2px;
 }
 
-#footer div {
-}
