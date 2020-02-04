@@ -5,7 +5,7 @@
 <u>Reference</u> : https://matthewjamestaylor.com/bottom-footer
 
 GIT Branches:  
-1. <u>Responsive_Layout</u> - Demonstrate how to keep footers at the bottom of the page.  
+1. [Responsive_Layout](https://github.com/KiranMohan/react-webpack-typescript-babel/tree/Responsive_Layout) - Demonstrate how to keep footers at the bottom of the page.  
 
 **Starting the development server**
 ```shell
