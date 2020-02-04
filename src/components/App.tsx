@@ -1,5 +1,4 @@
 import React from 'react';
-import { hot } from 'react-hot-loader/root';
 import { Counter } from './Counter';
 import { Hello } from './Hello';
 
@@ -10,4 +9,4 @@ const App = () => (
     </>
 );
 
-export default hot(App);
+export default App;
