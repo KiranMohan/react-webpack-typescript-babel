@@ -5,6 +5,7 @@ const path = require('path');
 const APP_PATH = path.resolve(__dirname, 'src');
 
 module.exports = {
+    devtool: 'source-map',
     entry: ['react-hot-loader/patch', APP_PATH],
 
     output: {
@@ -18,6 +19,9 @@ module.exports = {
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.json'],
+        alias: {
+            'react-dom': '@hot-loader/react-dom',
+        },
     },
 
     module: {
