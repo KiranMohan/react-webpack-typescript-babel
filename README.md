@@ -1,6 +1,8 @@
 # React-Webpack-TypeScript-Babel
 
-> This is sample repository demonstrates how to use React, Webpack, TypeScript and Babel
+<u>BranchName</u> : **Responsive_Layout**   
+<u>Objective</u> : Demonstrate how to keep footers at the bottom of the page
+<u>Reference</u> : https://matthewjamestaylor.com/bottom-footer
 
 ## Starting the development server
 

@@ -1,0 +1,57 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#rootContainer{
+    min-height: 100%;
+    position: relative;
+}
+
+#container {
+    position: absolute;
+    padding: 8px;
+    height: calc(100% - 16px);  /* we need to reduce 16px from height to account for the padding of 8px at top and bottom. */
+    width: calc(100% - 16px);   /* we need to reduce 16px from widht to account for the padding of 8px at left and right. */
+}
+
+#header {
+    padding: 8px;
+    height: 80px;
+
+    border: 1px solid;
+    border-radius: 2px;
+}
+#content {
+    padding: 8px;
+    margin: 8px 0;
+    height: calc(100% - 192px);
+    /* Calculation of height
+    #container padding top & bottom = 8px + 8px = 16px
+    #header height + padding top & bottom + border top & bottom = 80 + 16 + 2
+    #footer height + border = 60 + 2
+    #content margin top & bottom = 16
+
+    total = 192px;
+
+    */
+    overflow-y: scroll;
+
+    border: 1px solid;
+    border-radius: 2px;
+
+}
+#footer {
+    position: absolute;
+    bottom: 8px;
+    width: inherit;
+    height: 60px;
+    /*padding: 8px;  No Padding at footer. Apply padding if required to the child elements. */
+
+    border: 1px solid;
+    border-radius: 2px;
+}
+
+#footer div {
+}
